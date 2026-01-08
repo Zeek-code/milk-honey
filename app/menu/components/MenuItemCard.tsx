@@ -44,13 +44,13 @@ export default function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
         {item.availableHot || item.availableIced || item.availableBlended ? (
           <div className="flex gap-1 ml-2 flex-shrink-0">
             {item.availableHot && (
-              <Coffee className="h-4 w-4 text-coffee-600" title="Available hot" />
+              <Coffee className="h-4 w-4 text-coffee-600" aria-label="Available hot" />
             )}
             {item.availableIced && (
-              <Snowflake className="h-4 w-4 text-blue-500" title="Available iced" />
+              <Snowflake className="h-4 w-4 text-blue-500" aria-label="Available iced" />
             )}
             {item.availableBlended && (
-              <Zap className="h-4 w-4 text-purple-500" title="Available blended" />
+              <Zap className="h-4 w-4 text-purple-500" aria-label="Available blended" />
             )}
           </div>
         ) : null}
