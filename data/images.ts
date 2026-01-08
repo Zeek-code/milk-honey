@@ -16,31 +16,31 @@ export const businessInfo: BusinessInfo = {
   },
 };
 
-// Hero slideshow images (using placeholder URLs - replace with actual images)
+// Hero slideshow images
 export const heroImages = [
   {
-    src: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&h=1080&fit=crop",
-    alt: "Cozy coffee shop interior",
+    src: "/Images/inside1.jpg",
+    alt: "Coffee shop interior",
     title: "Welcome to Milk & Honey",
     subtitle: "Your neighborhood coffee shop",
   },
   {
-    src: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1920&h=1080&fit=crop",
-    alt: "Fresh coffee being poured",
+    src: "/Images/inside2.jpg",
+    alt: "Coffee shop interior",
     title: "Fresh Coffee Daily",
     subtitle: "Locally roasted by Blue Jazz Coffee Roasters",
   },
   {
-    src: "https://images.unsplash.com/photo-1554118811-1e0d18224ef6?w=1920&h=1080&fit=crop",
-    alt: "Delicious breakfast items",
-    title: "Breakfast Served All Day",
-    subtitle: "From burritos to parfaits",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1556910096-6f5e72db6803?w=1920&h=1080&fit=crop",
-    alt: "Local art on display",
+    src: "/Images/mural.jpg",
+    alt: "Local art mural",
     title: "Supporting Local Artists",
     subtitle: "Featuring student artwork and local products",
+  },
+  {
+    src: "/Images/inside3.jpg",
+    alt: "Coffee shop interior",
+    title: "Breakfast Served All Day",
+    subtitle: "From burritos to parfaits",
   },
 ];
 

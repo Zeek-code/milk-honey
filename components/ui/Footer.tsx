@@ -100,10 +100,22 @@ export default function Footer() {
                 Menu
               </Link>
               <Link
+                href="/gallery"
+                className="block text-sm text-coffee-300 hover:text-honey-300 transition-colors"
+              >
+                Gallery
+              </Link>
+              <Link
                 href="/about"
                 className="block text-sm text-coffee-300 hover:text-honey-300 transition-colors"
               >
                 About
+              </Link>
+              <Link
+                href="/careers"
+                className="block text-sm text-coffee-300 hover:text-honey-300 transition-colors"
+              >
+                Careers
               </Link>
               <Link
                 href="/locations"

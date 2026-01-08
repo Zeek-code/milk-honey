@@ -41,10 +41,52 @@ export default function MenuPage() {
     setCartItems((prev) => prev.filter((item) => item.id !== itemId));
   };
 
-  const handleCheckout = () => {
-    // TODO: Integrate with payment backend
-    console.log("Checkout items:", cartItems);
-    alert("Checkout functionality ready for backend integration!");
+  const handleCheckout = async () => {
+    // Payment integration point
+    // See lib/payment.ts and app/api/payment/route.ts for implementation structure
+    
+    try {
+      // Calculate totals
+      const subtotal = cartItems.reduce((sum, item) => {
+        const price =
+          typeof item.price === "number"
+            ? item.price
+            : item.selectedSize === "large"
+            ? item.price.large || 0
+            : item.selectedSize === "small"
+            ? item.price.small || 0
+            : item.price.medium || 0;
+        return sum + price * item.quantity;
+      }, 0);
+      
+      const tax = subtotal * 0.09; // 9% tax - adjust as needed
+      const total = subtotal + tax;
+
+      // Prepare payment data
+      const paymentData = {
+        amount: Math.round(total * 100), // Convert to cents
+        currency: "USD",
+        items: cartItems,
+        metadata: {
+          orderType: "online",
+          timestamp: new Date().toISOString(),
+        },
+      };
+
+      // TODO: Replace with actual payment provider integration
+      // Example: const response = await fetch('/api/payment', { method: 'POST', body: JSON.stringify(paymentData) });
+      
+      console.log("Checkout items:", cartItems);
+      console.log("Payment data ready:", paymentData);
+      
+      // Placeholder - replace with actual payment flow
+      alert(
+        `Payment system ready for integration!\n\nSubtotal: $${subtotal.toFixed(2)}\nTax: $${tax.toFixed(2)}\nTotal: $${total.toFixed(2)}\n\nSee lib/payment.ts for integration guide.`
+      );
+    } catch (error) {
+      console.error("Checkout error:", error);
+      alert("An error occurred during checkout. Please try again.");
+    }
   };
 
   const filteredSections = menuSections.map((section) => ({
@@ -74,32 +116,32 @@ export default function MenuPage() {
         </div>
       </div>
 
-      {/* Search and Cart Button */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between mb-8">
-          <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-coffee-400" />
-            <input
-              type="text"
-              placeholder="Search menu items..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-coffee-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-honey-400 bg-white"
-            />
+        {/* Search and Cart Button */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between mb-6 md:mb-8">
+            <div className="relative flex-1 w-full sm:max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-coffee-400" />
+              <input
+                type="text"
+                placeholder="Search menu items..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-2.5 md:py-2 text-base md:text-sm border border-coffee-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-honey-400 bg-white"
+              />
+            </div>
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="relative px-6 py-2.5 md:py-2 bg-honey-500 text-coffee-900 rounded-lg font-semibold hover:bg-honey-400 transition-colors flex items-center justify-center gap-2 text-base md:text-sm"
+            >
+              <ShoppingCart className="h-5 w-5" />
+              <span className="hidden sm:inline">Cart</span>
+              {cartItemCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-coffee-900 text-white rounded-full h-6 w-6 flex items-center justify-center text-xs font-bold">
+                  {cartItemCount}
+                </span>
+              )}
+            </button>
           </div>
-          <button
-            onClick={() => setIsCartOpen(true)}
-            className="relative px-6 py-2 bg-honey-500 text-coffee-900 rounded-lg font-semibold hover:bg-honey-400 transition-colors flex items-center gap-2"
-          >
-            <ShoppingCart className="h-5 w-5" />
-            Cart
-            {cartItemCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-coffee-900 text-honey-50 rounded-full h-6 w-6 flex items-center justify-center text-xs font-bold">
-                {cartItemCount}
-              </span>
-            )}
-          </button>
-        </div>
 
         {/* Menu Sections */}
         <div className="max-w-7xl mx-auto">

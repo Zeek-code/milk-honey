@@ -35,58 +35,60 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-coffee-900">
                 Welcome to {businessInfo.name}
               </h2>
-              <p className="text-lg text-coffee-700 mb-6 leading-relaxed">
+              <p className="text-lg text-coffee-800 mb-6 leading-relaxed">
                 {businessInfo.description}
               </p>
-              <p className="text-lg text-coffee-700 mb-6 leading-relaxed">
+              <p className="text-lg text-coffee-800 mb-6 leading-relaxed">
                 Opened in March 2020, Milk & Honey Coffee Co. was founded with a
                 mission to bring communities together. Located in East Topeka, we
                 serve as more than just a coffee shop—we're a gathering place where
                 neighbors become friends and local talent is celebrated.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
+              
+              <p className="text-lg text-coffee-800 mb-6 leading-relaxed">
+                From the moment you step through our doors, you'll notice something special. 
+                Our cozy, rustic atmosphere invites you to stay awhile—whether you're 
+                catching up with friends, getting work done, or simply enjoying a quiet 
+                moment with a perfectly crafted cup of coffee. Our friendly staff knows 
+                your name, remembers your order, and genuinely cares about making your 
+                visit memorable.
+              </p>
 
-      {/* Team Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 text-center text-coffee-900">
-              Meet Our Team
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-coffee-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-4xl font-serif font-bold text-coffee-700">
-                    DM
-                  </span>
-                </div>
-                <h3 className="text-xl font-serif font-semibold mb-2 text-coffee-900">
-                  Darlene Morgan
-                </h3>
-                <p className="text-coffee-600">Co-Owner</p>
-                <p className="text-coffee-700 mt-4">
-                  Darlene brings passion and dedication to creating a welcoming
-                  space for the community.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-32 h-32 bg-coffee-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-4xl font-serif font-bold text-coffee-700">
-                    CH
-                  </span>
-                </div>
-                <h3 className="text-xl font-serif font-semibold mb-2 text-coffee-900">
-                  Chris Hartman
-                </h3>
-                <p className="text-coffee-600">Co-Owner</p>
-                <p className="text-coffee-700 mt-4">
-                  Chris is committed to supporting local students and artists while
-                  serving quality coffee and food.
-                </p>
-              </div>
+              <p className="text-lg text-coffee-800 mb-6 leading-relaxed">
+                We take pride in serving locally roasted coffee from Blue Jazz Coffee 
+                Roasters, ensuring every cup is fresh and full of flavor. Our signature 
+                Milk & Honey Latte has become a customer favorite, but we offer something 
+                for everyone—from classic espresso drinks to refreshing smoothies and our 
+                famous 316 Refreshers. And when it comes to food, we believe breakfast 
+                shouldn't be limited to morning hours. That's why we serve our delicious 
+                breakfast burritos, Polish burritos, and other morning favorites all day 
+                long. Our lunch menu features hearty sandwiches, fresh salads, and seasonal 
+                soups, all made with care and attention to quality.
+              </p>
+
+              <p className="text-lg text-coffee-800 mb-6 leading-relaxed">
+                What truly sets us apart is our commitment to the East Topeka community. 
+                Our walls serve as a rotating gallery, showcasing the incredible artwork 
+                of local students and artists. We hire students, giving them valuable work 
+                experience in a supportive environment that understands the demands of 
+                balancing school and work. We feature products from other local businesses, 
+                creating a network of support that strengthens our entire community.
+              </p>
+
+              <p className="text-lg text-coffee-800 mb-6 leading-relaxed">
+                Whether you're a regular who's been coming since we opened or a first-time 
+                visitor, you're family here. We've built a space where everyone feels 
+                welcome, where conversations flow as easily as our coffee, and where the 
+                simple act of sharing a meal or a drink becomes a moment of connection. 
+                At Milk & Honey, we don't just serve coffee and food—we serve community, 
+                one cup at a time.
+              </p>
+
+              <p className="text-lg text-coffee-800 mb-6 leading-relaxed font-semibold">
+                Come experience the warmth, the flavor, and the community that makes 
+                Milk & Honey Coffee Co. your favorite spot in East Topeka. We can't wait 
+                to welcome you!
+              </p>
             </div>
           </div>
         </div>
@@ -105,7 +107,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-serif font-semibold mb-2 text-coffee-900">
                   Local Art
                 </h3>
-                <p className="text-coffee-700">
+                <p className="text-coffee-800">
                   We proudly display artwork from local students and artists,
                   creating a rotating gallery that celebrates our community's
                   creativity.
@@ -116,7 +118,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-serif font-semibold mb-2 text-coffee-900">
                   Student Employment
                 </h3>
-                <p className="text-coffee-700">
+                <p className="text-coffee-800">
                   We hire local students, providing them with valuable work
                   experience and a supportive environment to grow.
                 </p>
@@ -126,7 +128,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-serif font-semibold mb-2 text-coffee-900">
                   Local Products
                 </h3>
-                <p className="text-coffee-700">
+                <p className="text-coffee-800">
                   Our coffee is locally roasted by Blue Jazz Coffee Roasters, and
                   we feature products from other local businesses.
                 </p>

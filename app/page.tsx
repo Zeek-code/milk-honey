@@ -82,9 +82,9 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-coffee-900">
               Welcome to {businessInfo.name}
             </h2>
-            <p className="text-lg text-coffee-700 mb-8 leading-relaxed">
-              {businessInfo.description}
-            </p>
+              <p className="text-lg text-coffee-800 mb-8 leading-relaxed">
+                {businessInfo.description}
+              </p>
             <div className="flex flex-wrap justify-center gap-6 mt-12">
               <Link
                 href="/menu"
@@ -114,7 +114,7 @@ export default function HomePage() {
               <h3 className="text-xl font-serif font-semibold mb-2 text-coffee-900">
                 Fresh Coffee Daily
               </h3>
-              <p className="text-coffee-600">
+              <p className="text-coffee-800">
                 Locally roasted coffee from Blue Jazz Coffee Roasters, served fresh every day.
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function HomePage() {
               <h3 className="text-xl font-serif font-semibold mb-2 text-coffee-900">
                 Community Focused
               </h3>
-              <p className="text-coffee-600">
+              <p className="text-coffee-800">
                 Supporting local students, artists, and the East Topeka community since 2020.
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
               <h3 className="text-xl font-serif font-semibold mb-2 text-coffee-900">
                 Made with Love
               </h3>
-              <p className="text-coffee-600">
+              <p className="text-coffee-800">
                 Every cup and every meal is prepared with care and attention to quality.
               </p>
             </div>
@@ -145,12 +145,12 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-coffee-800 text-honey-50">
+      <section className="py-16 md:py-24 bg-coffee-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-white">
             Visit Us Today
           </h2>
-          <p className="text-xl text-honey-100 mb-8">
+          <p className="text-xl text-white/90 mb-8">
             {businessInfo.address}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -162,7 +162,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/reviews"
-              className="px-6 py-3 border-2 border-honey-400 text-honey-50 rounded-lg font-semibold hover:bg-honey-400 hover:text-coffee-900 transition-colors"
+              className="px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-coffee-900 transition-colors"
             >
               Read Reviews
             </Link>
