@@ -120,15 +120,9 @@ export default function LocationsPage() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'YOUR_API_KEY'}&q=${encodeURIComponent(
-                  `${location.address}, ${location.city}, ${location.state} ${location.zip}`
-                )}`}
+                src="https://www.google.com/maps?q=39.01560826036741,-95.64813683558222&output=embed&zoom=15"
               />
               <div className="p-4 bg-coffee-100 text-center">
-                <p className="text-sm text-coffee-600">
-                  Note: Replace YOUR_API_KEY with your Google Maps API key for the
-                  embedded map to work.
-                </p>
                 <Link
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                     `${location.address}, ${location.city}, ${location.state} ${location.zip}`
