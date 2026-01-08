@@ -1,0 +1,68 @@
+import { Review } from "@/types";
+
+export const reviews: Review[] = [
+  {
+    id: "1",
+    author: "Sarah M.",
+    rating: 5,
+    text: "Absolutely love this place! The coffee is amazing and the staff is so friendly. The cozy atmosphere makes it the perfect spot to work or catch up with friends.",
+    date: "2024-03-15",
+    source: "google",
+  },
+  {
+    id: "2",
+    author: "Mike T.",
+    rating: 5,
+    text: "Best breakfast burrito in Topeka! The Polish burrito is my go-to. Great prices and the coffee is always fresh. Highly recommend!",
+    date: "2024-03-10",
+    source: "google",
+  },
+  {
+    id: "3",
+    author: "Jennifer L.",
+    rating: 5,
+    text: "Such a welcoming community space. I love that they support local students and artists. The Milk & Honey Latte is delicious!",
+    date: "2024-03-05",
+    source: "google",
+  },
+  {
+    id: "4",
+    author: "David K.",
+    rating: 4,
+    text: "Great coffee shop with a rustic charm. The sandwiches are good and the service is quick. Perfect for a lunch break.",
+    date: "2024-02-28",
+    source: "google",
+  },
+  {
+    id: "5",
+    author: "Emily R.",
+    rating: 5,
+    text: "The staff here is wonderful and they really care about the community. The smoothies are fantastic and I love seeing the local art on the walls!",
+    date: "2024-02-20",
+    source: "google",
+  },
+  {
+    id: "6",
+    author: "Robert P.",
+    rating: 5,
+    text: "Consistently great coffee and food. The owner is always friendly and remembers regulars. This is my favorite spot in East Topeka!",
+    date: "2024-02-15",
+    source: "google",
+  },
+  {
+    id: "7",
+    author: "Lisa H.",
+    rating: 4,
+    text: "Nice atmosphere and good selection of drinks. The baked goods are fresh and the prices are reasonable. Will definitely be back!",
+    date: "2024-02-10",
+    source: "google",
+  },
+  {
+    id: "8",
+    author: "Chris W.",
+    rating: 5,
+    text: "Love supporting a local business that gives back to the community. The coffee is excellent and the breakfast items are served all day - perfect for my schedule!",
+    date: "2024-02-05",
+    source: "google",
+  },
+];
