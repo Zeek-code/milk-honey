@@ -1,10 +1,12 @@
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import ImageGallery from "@/components/ui/ImageGallery";
 import { galleryImages, businessInfo } from "@/data/images";
+import { HomepageStructuredData } from "@/components/seo/StructuredData";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-coffee-50">
+      <HomepageStructuredData />
       {/* Hero Section */}
       <section className="relative h-[400px] overflow-hidden">
         <OptimizedImage

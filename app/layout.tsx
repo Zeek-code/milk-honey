@@ -18,9 +18,36 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: `${businessInfo.name} | ${businessInfo.tagline}`,
+  title: {
+    default: `${businessInfo.name} | ${businessInfo.tagline}`,
+    template: `%s | ${businessInfo.name}`,
+  },
   description: businessInfo.description,
-  keywords: ["coffee", "Topeka", "Kansas", "cafe", "breakfast", "lunch", "local"],
+  openGraph: {
+    title: businessInfo.name,
+    description: businessInfo.description,
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com",
+    siteName: businessInfo.name,
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: businessInfo.name,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: businessInfo.name,
+    description: businessInfo.description,
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/og-image.jpg`],
+  },
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com",
+  },
 };
 
 export default function RootLayout({

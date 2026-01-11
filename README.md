@@ -1,6 +1,6 @@
 # Milk & Honey Coffee Co. Website
 
-A modern, responsive website for Milk & Honey Coffee Co. in Topeka, Kansas, built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive website for Milk & Honey Coffee Co. in Topeka, Kansas, built with Next.js 16, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -14,7 +14,7 @@ A modern, responsive website for Milk & Honey Coffee Co. in Topeka, Kansas, buil
 
 ## Tech Stack
 
-- **Next.js 14** - React framework with App Router
+- **Next.js 16** - React framework with App Router
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Utility-first styling
 - **Lucide React** - Icon library

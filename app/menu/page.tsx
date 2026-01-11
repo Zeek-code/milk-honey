@@ -6,6 +6,7 @@ import { menuSections } from "@/data/menu";
 import MenuSection from "./components/MenuSection";
 import Cart from "./components/Cart";
 import { CartItem } from "@/types";
+import { MenuStructuredData } from "@/components/seo/MenuStructuredData";
 
 export default function MenuPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -76,15 +77,11 @@ export default function MenuPage() {
       // TODO: Replace with actual payment provider integration
       // Example: const response = await fetch('/api/payment', { method: 'POST', body: JSON.stringify(paymentData) });
       
-      console.log("Checkout items:", cartItems);
-      console.log("Payment data ready:", paymentData);
-      
       // Placeholder - replace with actual payment flow
       alert(
         `Payment system ready for integration!\n\nSubtotal: $${subtotal.toFixed(2)}\nTax: $${tax.toFixed(2)}\nTotal: $${total.toFixed(2)}\n\nSee lib/payment.ts for integration guide.`
       );
     } catch (error) {
-      console.error("Checkout error:", error);
       alert("An error occurred during checkout. Please try again.");
     }
   };
@@ -104,6 +101,7 @@ export default function MenuPage() {
 
   return (
     <div className="min-h-screen bg-coffee-50">
+      <MenuStructuredData />
       {/* Header */}
       <div className="bg-coffee-900 text-honey-50 py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

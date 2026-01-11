@@ -6,6 +6,7 @@ import { reviews } from "@/data/reviews";
 import { Review } from "@/types";
 import { formatDate } from "@/lib/utils";
 import { cn } from "@/lib/utils";
+import { ReviewStructuredData } from "@/components/seo/ReviewStructuredData";
 
 export default function ReviewsPage() {
   const [filterRating, setFilterRating] = useState<number | null>(null);
@@ -28,6 +29,7 @@ export default function ReviewsPage() {
 
   return (
     <div className="min-h-screen bg-coffee-50">
+      <ReviewStructuredData />
       {/* Header */}
       <section className="bg-coffee-900 text-honey-50 py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,6 +6,7 @@ import { ArrowRight, Coffee, Users, Heart } from "lucide-react";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { heroImages, businessInfo } from "@/data/images";
 import { cn } from "@/lib/utils";
+import { HomepageStructuredData } from "@/components/seo/StructuredData";
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,6 +20,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
+      <HomepageStructuredData />
       {/* Hero Slideshow */}
       <section className="relative h-[600px] md:h-[700px] overflow-hidden">
         {heroImages.map((image, index) => (

@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { location } from "@/data/locations";
 import Link from "next/link";
+import { LocationStructuredData } from "@/components/seo/LocationStructuredData";
 
 export default function LocationsPage() {
   const days = [
@@ -15,6 +16,7 @@ export default function LocationsPage() {
 
   return (
     <div className="min-h-screen bg-coffee-50">
+      <LocationStructuredData />
       {/* Header */}
       <section className="bg-coffee-900 text-honey-50 py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,20 +122,8 @@ export default function LocationsPage() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=39.01560826036741,-95.64813683558222&output=embed&zoom=15"
+                src="https://www.google.com/maps?q=39.01560826036741,-95.64813683558222&output=embed&zoom=8"
               />
-              <div className="p-4 bg-coffee-100 text-center">
-                <Link
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                    `${location.address}, ${location.city}, ${location.state} ${location.zip}`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-honey-600 hover:text-honey-700 mt-2 inline-block font-semibold"
-                >
-                  Open in Google Maps →
-                </Link>
-              </div>
             </div>
           </div>
         </div>
