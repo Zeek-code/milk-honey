@@ -1,6 +1,16 @@
 /**
  * Payment API Route
  * 
+ * IMPORTANT: This API route will NOT work with static export (GitHub Pages).
+ * API routes require a server environment and are automatically excluded during
+ * static export builds. This file is kept for reference when moving to a
+ * server-based hosting solution (Vercel, Netlify with serverless functions, etc.).
+ * 
+ * For GitHub Pages (static hosting), payment processing must be handled via:
+ * - Client-side payment providers (Stripe Checkout, PayPal buttons, etc.)
+ * - External payment services with their own APIs
+ * - Third-party payment widgets
+ * 
  * This is a placeholder for payment processing.
  * 
  * To implement:

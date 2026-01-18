@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ShoppingCart, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { menuSections } from "@/data/menu";
 import MenuSection from "./components/MenuSection";
 import Cart from "./components/Cart";
@@ -131,7 +131,6 @@ export default function MenuPage() {
               onClick={() => setIsCartOpen(true)}
               className="relative px-6 py-2.5 md:py-2 bg-honey-500 text-coffee-900 rounded-lg font-semibold hover:bg-honey-400 transition-colors flex items-center justify-center gap-2 text-base md:text-sm"
             >
-              <ShoppingCart className="h-5 w-5" />
               <span className="hidden sm:inline">Cart</span>
               {cartItemCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-coffee-900 text-white rounded-full h-6 w-6 flex items-center justify-center text-xs font-bold">
@@ -154,7 +153,6 @@ export default function MenuPage() {
               <MenuSection
                 key={section.id}
                 section={section}
-                onAddToCart={handleAddToCart}
               />
             ))
           )}

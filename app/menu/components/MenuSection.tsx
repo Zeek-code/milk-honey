@@ -1,12 +1,11 @@
-import { MenuSection as MenuSectionType, CartItem } from "@/types";
+import { MenuSection as MenuSectionType } from "@/types";
 import MenuItemCard from "./MenuItemCard";
 
 interface MenuSectionProps {
   section: MenuSectionType;
-  onAddToCart?: (item: CartItem) => void;
 }
 
-export default function MenuSection({ section, onAddToCart }: MenuSectionProps) {
+export default function MenuSection({ section }: MenuSectionProps) {
   return (
     <section className="mb-12" id={section.id}>
       <div className="mb-6">
@@ -19,7 +18,7 @@ export default function MenuSection({ section, onAddToCart }: MenuSectionProps) 
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {section.items.map((item) => (
-          <MenuItemCard key={item.id} item={item} onAddToCart={onAddToCart} />
+          <MenuItemCard key={item.id} item={item} />
         ))}
       </div>
     </section>

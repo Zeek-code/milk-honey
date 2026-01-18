@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "export": "next build",
+    "lint": "next lint",
+    "deploy": "npm run build && echo 'Build complete! The out/ directory contains static files ready for GitHub Pages.'"
   },
   "dependencies": {
     "clsx": "^2.1.1",

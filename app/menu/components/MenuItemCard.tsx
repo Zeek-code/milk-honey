@@ -1,34 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { Plus, Coffee, Snowflake, Zap } from "lucide-react";
-import { MenuItem, CartItem } from "@/types";
+import { Coffee, Snowflake, Zap } from "lucide-react";
+import { MenuItem } from "@/types";
 import { formatPrice } from "@/lib/utils";
-import { cn } from "@/lib/utils";
 
 interface MenuItemCardProps {
   item: MenuItem;
-  onAddToCart?: (item: CartItem) => void;
 }
 
-export default function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
-  const [isAdding, setIsAdding] = useState(false);
-
-  const handleAddToCart = () => {
-    if (onAddToCart) {
-      const cartItem: CartItem = {
-        ...item,
-        quantity: 1,
-      };
-      onAddToCart(cartItem);
-      setIsAdding(true);
-      setTimeout(() => setIsAdding(false), 500);
-    }
-  };
-
-  const hasMultipleSizes =
-    typeof item.price === "object" &&
-    (item.price.medium || item.price.large || item.price.small);
+export default function MenuItemCard({ item }: MenuItemCardProps) {
 
   return (
     <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 md:p-6 border border-coffee-200">
@@ -73,18 +53,6 @@ export default function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
           </span>
           <span className="text-xs text-coffee-500">Prices before tax</span>
         </div>
-        {onAddToCart && (
-          <button
-            onClick={handleAddToCart}
-            className={cn(
-              "flex items-center gap-2 px-4 py-2.5 bg-honey-500 text-coffee-900 rounded-lg font-semibold hover:bg-honey-400 transition-all w-full sm:w-auto justify-center",
-              isAdding && "scale-95"
-            )}
-          >
-            <Plus className="h-4 w-4" />
-            <span className="text-sm md:text-base">Add to Cart</span>
-          </button>
-        )}
       </div>
     </div>
   );

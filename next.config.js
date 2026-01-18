@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -12,6 +14,8 @@ const nextConfig = {
       },
     ],
   },
+  // Disable trailing slash for GitHub Pages compatibility
+  trailingSlash: false,
 };
 
 module.exports = nextConfig;
