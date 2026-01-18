@@ -36,6 +36,7 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://zeek-code.github.io/milk-honey
+          NEXT_PUBLIC_BASE_PATH: /milk-honey
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
