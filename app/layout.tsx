@@ -3,7 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/ui/Navigation";
 import Footer from "@/components/ui/Footer";
-import { businessInfo } from "@/data/images";
+import { businessInfo, heroImages } from "@/data/images";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: businessInfo.name,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/og-image.jpg`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}${heroImages[0].src}`,
         width: 1200,
         height: 630,
-        alt: businessInfo.name,
+        alt: heroImages[0].alt,
       },
     ],
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: businessInfo.name,
     description: businessInfo.description,
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/og-image.jpg`],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}${heroImages[0].src}`],
   },
   alternates: {
     canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey",
