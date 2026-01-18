@@ -14,9 +14,9 @@ export function generateLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "CafeOrCoffeeShop",
     name: businessInfo.name,
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/Images/inside1.jpg`,
-    "@id": `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}#organization`,
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com",
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/Images/inside1.jpg`,
+    "@id": `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}#organization`,
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey",
     telephone: businessInfo.phone,
     email: businessInfo.email,
     address: {
@@ -79,8 +79,8 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: businessInfo.name,
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com",
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/logo.png`,
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey",
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/logo.png`,
     contactPoint: {
       "@type": "ContactPoint",
       telephone: businessInfo.phone,
@@ -107,7 +107,7 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}${item.url}`,
+      item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}${item.url}`,
     })),
   };
 }

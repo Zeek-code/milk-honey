@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey";
   const currentDate = new Date().toISOString();
 
   return [

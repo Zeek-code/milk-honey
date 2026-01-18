@@ -16,11 +16,11 @@ export const menuMetadata: Metadata = {
     title: "Menu | Milk & Honey Coffee Co.",
     description:
       "Explore our full menu featuring locally roasted coffee, breakfast, and lunch items.",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/menu`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/menu`,
     siteName: "Milk & Honey Coffee Co.",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/og-menu.jpg`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/og-menu.jpg`,
         width: 1200,
         height: 630,
         alt: "Milk & Honey Coffee Co. Menu",
@@ -34,10 +34,10 @@ export const menuMetadata: Metadata = {
     title: "Menu | Milk & Honey Coffee Co.",
     description: "Explore our full menu featuring locally roasted coffee, breakfast, and lunch.",
     images: [
-      `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/og-menu.jpg`,
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/og-menu.jpg`,
     ],
   },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/menu`,
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/menu`,
   },
 };

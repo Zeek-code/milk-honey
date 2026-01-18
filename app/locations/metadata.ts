@@ -16,11 +16,11 @@ export const locationsMetadata: Metadata = {
     title: "Location & Hours | Milk & Honey Coffee Co.",
     description:
       "Visit us at 2200 SE 29th St, Topeka, KS. Open daily. Get directions and view our hours.",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/locations`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/locations`,
     siteName: "Milk & Honey Coffee Co.",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/og-locations.jpg`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/og-locations.jpg`,
         width: 1200,
         height: 630,
         alt: "Milk & Honey Coffee Co. Location",
@@ -34,10 +34,10 @@ export const locationsMetadata: Metadata = {
     title: "Location & Hours | Milk & Honey Coffee Co.",
     description: "Visit us at 2200 SE 29th St, Topeka, KS. Open daily.",
     images: [
-      `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/og-locations.jpg`,
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/og-locations.jpg`,
     ],
   },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/locations`,
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/locations`,
   },
 };

@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/milk-honey',
+  assetPrefix: '/milk-honey',
   images: {
     unoptimized: true,
     remotePatterns: [

@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: businessInfo.name,
     description: businessInfo.description,
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey",
     siteName: businessInfo.name,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/og-image.jpg`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: businessInfo.name,
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: businessInfo.name,
     description: businessInfo.description,
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com"}/og-image.jpg`],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey"}/og-image.jpg`],
   },
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://www.milkandhoneycoffee.com",
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://zeek-code.github.io/milk-honey",
   },
 };
 
